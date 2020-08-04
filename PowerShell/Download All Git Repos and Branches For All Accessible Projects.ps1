@@ -97,11 +97,6 @@ foreach ($organization in $Organizations) {
         }
 
         foreach ($repository in $repositories.value) {
-            # The following repository (Repairify/Legacy Astech Code/Authentication) is empty and no one has access to it
-            if ($organization.accountName -eq "repairify" -and $repository.id -eq '69e96f01-dc95-4017-a382-d4949fb2fe70'){
-                continue;
-            }
-
             if ($IgnoreRepositories.Contains($repository.name)){
                 continue;
             }
